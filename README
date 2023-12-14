@@ -1,0 +1,6 @@
+Subroutines to create initial and boundary conditions to nest non-hydrostatic code flow_solve (Winters and de la Fuente, 2012, Ocean Model.) with a 1/64◦ regional configuration of the Gulf of Lion using the hydrostatic ocean general circulation model NEMO. Subroutines are:
+
+Step 1: Extracts NEMO output for the subdomain of interest to model with flow_solve.
+Step 2: Regrids from geographic to Cartesian coordinates for 3D fields as well as the 2D field SSH. 
+Step 3: Computes in-situ density from NEMO temperature and salinity using the same equation of state as in NEMO.
+Step 4: Creates final initial and boundary conditions by regridding to an evenly spaced grid of higher spatial resolution than that of NEMO.
